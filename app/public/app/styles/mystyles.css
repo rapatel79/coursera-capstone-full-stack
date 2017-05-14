@@ -1,0 +1,340 @@
+@media screen and (min-width: 320px) {
+    body {
+        font-size: 12px;
+    }
+    
+    .logo {
+      height: 50px;
+      width: 80px;
+    }
+
+    .landing-header {
+        height: 50px;
+      }
+
+      .landing-footer {
+        height: 50px;
+      }
+
+      .landing-header-register-btn {
+          top: 10px;
+      }
+}
+@media screen and (min-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    .logo {
+      height: 60px;
+      width: 100px;
+    }
+    .landing-header {
+        height: 60px;
+      }
+     .landing-footer {
+        height: 60px;
+      }
+}
+@media screen and (min-width: 800px) {
+    body {
+        font-size: 16px;
+    }
+    .logo {
+      height: 80px;
+      width: 140px;
+    }
+     .landing-header {
+        height: 80px;
+      }
+     .landing-footer {
+        height: 80px;
+      }
+     .landing-header-register-btn {
+          top: 30px;
+      }
+
+}
+@media screen and (min-width: 1200px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+body {
+  align: center;
+  padding: 50px 0px 0px 0px;
+  z-index: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+h1 { font-size: 3.125em; }
+h2 { font-size: 2.3125em;}
+h3 { font-size: 1.75em; }
+
+/* General */
+.main-background {
+  background-color: #d9eafe;
+  background: linear-gradient( #d9eafe, #f7f6f6);
+  height: 100%;
+  padding-top: 0px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+}
+
+.clickable {
+  cursor: pointer; cursor: hand;
+}
+
+.instruction {
+  color: #f7f6f6;
+  background-color: deeppink;
+  font-size: 0.9em;
+  font-weight: bold;
+  margin-top: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+  border-radius: 25px;
+}
+
+.todays-date {
+  color: #006be5;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.page-heading {
+  padding-bottom: 30px;
+}
+
+.section-heading {
+  color: #483d3d;
+  padding-bottom: 30px;
+}
+
+/* Home */
+.home-nav-pills > li.active > a {
+  background-color: #11c1f3;
+  color: #fff;
+  font-weight: bolder;
+}
+
+.home-nav-pills > li > a {
+  color: #11c1f3;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+ul.app-stacked-nav > li.active > a {
+  background-color: #11c1f3;
+  color: #fff;
+  font-weight: bolder;
+}
+
+ul.app-stacked-nav > li > a {
+  color: #11c1f3;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+.sign-out {
+    position: absolute;
+    left: 30px;
+    top: 80px;
+    font-size: 0.8em;
+}
+
+/* Add New Commitment*/
+/*.add-new-form .form-control {
+  font-size: 1em;
+}*/
+
+/*.timepicker-adjust {
+  padding-top: 8px;
+}
+.timepicker-adjust > .form-control-feedback {
+  top: 33px !important;
+}*/
+
+.add-new-form {
+  padding-top: 20px;
+}
+
+/*START: My Family */
+.my-family-content {
+  padding-top: 20px !important;
+}
+
+.my-family-member-heading {
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+
+.my-family-members {
+  padding-left: 0px;
+}
+
+.my-family-members > .member-info {
+    border: none;
+    background-color: transparent;
+    color: #006be5;
+}
+
+.my-family-members-heading {
+  color: #483d3d;
+  font-size: 1.1em;
+}
+
+/*Commitment table*/
+.table-instruction {
+  color: deeppink;
+  background-color: transparent;
+  font-size: 0.8em;
+  padding-top: 7px;
+  text-align: center;
+}
+
+.commitment-table {
+  background-color: #f7f6f6;
+  color: #006be5;
+  margin-bottom: 0px;
+}
+
+.commitment-table .header {
+  font-weight: bold;
+  background-color: #006be5;
+  color: #f7f6f6;
+  border-bottom: solid;
+  border-color: #d9eafe;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.commitment-table .data:nth-child(even) {
+  background-color: #ffe6ff;
+}
+
+.login-form {
+  width: 60%;
+  margin: auto;
+}
+
+a {
+  cursor: hand;
+}
+
+/*START: Landing Page */
+.landing-content {
+  margin: 0px auto;
+  padding: 50px 0px;
+}
+
+.landing-email-signup .email-input {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.email-input {
+  width: 60%;
+}
+
+.landing-signup-btn {
+  position: absolute;
+  background-image: -webkit-linear-gradient(top,#006be5 0,#5bc0de 100%)
+}
+
+.landing-signup-btn:active {
+   background-image: -webkit-linear-gradient(top,#006be5 0,#5bc0de 100%)
+}
+
+.landing-signup-btn:hover .landing-signup-btn:target {
+   background-image: -webkit-linear-gradient(top,#006be5 0,#5bc0de 100%)
+}
+
+.inner-addon { 
+    position: relative; 
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+
+.register-form {
+  height: 38px;
+}
+
+.landing-header {
+  background-color: #006be5;
+}
+
+.landing-footer {
+  background-color: #006be5;
+}
+
+.landing-register-login-link-container {
+  height: 100%;
+}
+
+.landing-header-register-btn {
+    position: absolute;
+    right: 10px;
+    color: #f7f6f6;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.landing-header-register-btn:hover {
+    color: white;
+}
+
+.landing-header-login-link {
+  position: absolute;
+  bottom: 0px;
+  right: 10px;
+  color: #f7f6f6;
+  font-size: 1em;
+}
+
+.landing-header-login-link:hover {
+  color: white;
+}
+
+.logo {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/*https://mentormate.com/blog/css-postit-note/*/
+.postit {
+  margin-top: 30px;
+  line-height: 1;    
+  text-align:center;     
+  border:1px solid #E8E8E8;  
+  border-top:30px solid #fdfd86;
+  font-family:'Reenie Beanie';    
+  border-bottom-right-radius: 60px 5px;
+  display:inline-block;    
+  background: #ffff88; /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #ffff88 81%, #ffff88 82%, #ffff88 82%, #ffffc6 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(81%,#ffff88), color-stop(82%,#ffff88), color-stop(82%,#ffff88), color-stop(100%,#ffffc6)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* IE10+ */
+  background: linear-gradient(135deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff88', endColorstr='#ffffc6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  }
+

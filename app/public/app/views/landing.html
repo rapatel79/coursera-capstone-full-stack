@@ -1,0 +1,35 @@
+
+    <div class="container">
+        <div class="row landing-content">
+            <div class="col-xs-12 col-sm-8">
+                <div class="row landing-email-signup">
+                    <div class="inner-addon left-addon email-input">
+                        <i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
+                        <input type="email" class="form-control" id="signUpEmail" 
+                            aria-describedby="signUpEmail" placeholder="Sign up with your email address"
+                            ng-model="signUpEmailAddress"
+                            ng-pattern = '/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i'>
+                    </div>
+                    <a href="#/register" class="btn btn-primary landing-signup-btn" ng-click="signUpWithEmail()" ng-disabled="isEmailNotValid()">Sign Up</a>
+                </div>
+                <div class="row">
+                    <h3>Easy management of family commitments</h3>
+                    <p>Homeaze helps you to keep in touch with all of those hugely significant 
+                        (but easily forgotten) family commitments. Whether it be home insurance, 
+                        car insurance, mobile phone cover, travel insurance, or any other policy 
+                        of significance, we've got you covered:</p>
+                    <ul>
+                        <li>share commitments with family members</li>
+                        <li>easy to use workflow for managing commitments</li>
+                        <li>advance notification at the end of each commitment</li>
+                        <li>keep in touch on-the-go online or via your Android/iOS device.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <div class="row">
+                    <img class="img-responsive" src="images/Scott_Pollack__family21_transparent.png"/>
+                </div>
+            </div>
+        </div>
+    </div>

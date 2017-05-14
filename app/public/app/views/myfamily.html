@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-4 col-sm-3 col-md-2">
+            <ul class="nav nav-pills nav-stacked app-stacked-nav">
+                <li role="presentation"><a href="#/home">Commitments</a></li>
+                <li role="presentation" class="active"><a href="#/myfamily">My Family</a></li>
+            </ul>
+            <div class="sign-out">
+                <a href="" ng-click="logout()">Sign Out</a>
+            </div>
+        </div>
+        <div class="col-xs-8 col-sm-9 col-md-10 main-background my-family-content">
+            <div ng-show="isLoading">
+                <span us-spinner="{radius:15, width:8, length: 30}"></span>
+            </div>
+            <div ng-show="!isLoading">
+                <div class="row">
+                    <div class="col-xs-12 col-md-8 table-responsive">
+                        <table class="table table-bordered commitment-table">
+                            <thead class="header">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Is Registered?</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="data" ng-repeat="member in familyMembers">
+                                    <td>{{member.firstName}} {{member.lastName}}</td>
+                                    <td>{{member.emailAddress}}</td>
+                                    <td><span class="glyphicon glyphicon-ok"></span></td>
+                                </tr>
+                                <tr class="data" ng-repeat="member in pendingInvitations">
+                                    <td title="Pending registration. Invitation sent by {{member.invitor}}">{{member.name}}</td>
+                                    <td>{{member.emailAddress}}</td>
+                                    <td><span class="glyphicon glyphicon-remove"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-xs-12 col-md-4 text-center" style="padding-top: 50px;">
+                        <button title="Invite a family member" class="btn btn-success" ng-click="sendInvitation()">Invite a family member</button>
+                    </div>
+                    <div class="col-xs-12 col-md-4 postit">
+                        <p>Support for managing family members has not yet been added.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

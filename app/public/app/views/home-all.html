@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-4 col-sm-3 col-md-2">
+            <ul class="nav nav-pills nav-stacked app-stacked-nav">
+                <li role="presentation" class="active"><a>Commitments</a></li>
+                <li role="presentation"><a href="#/myfamily">My Family</a></li>
+            </ul>
+            <div class="sign-out">
+                <a href="" ng-click="logout()">Sign Out</a>
+            </div>
+        </div>
+        <div ng-show="isLoading">
+            <span us-spinner="{radius:15, width:8, length: 30}"></span>
+        </div>
+        <div ng-show="!isLoading && !hasCommitments()" class="col-xs-8 main-background">
+            <p class="instruction">No commitments have been added yet. Please click Add New above to get started.</p>
+        </div>
+        <div ng-show="!isLoading && hasCommitments()" class="col-xs-8 col-sm-9 col-md-10 main-background">
+            <p class="table-instruction">Please click on a row to edit.</p>
+            <div class="table-responsive">
+                <table class="table table-bordered commitment-table">
+                    <thead>
+                        <tr class="header">
+                            <th>Category</th>
+                            <th>Product Type</th>
+                            <th>Provider</th>
+                            <th>Renewal Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="clickable data" title="Created by {{commitment.username}}" ng-click="editCommitment(commitment)" ng-repeat="commitment in commitments">
+                            <td>{{commitment.category}}</td>
+                            <td>{{commitment.productType}}</td>
+                            <td>{{commitment.providerName}}</td>
+                            <td>{{commitment.renewalDate | date: 'dd MMMM yyyy'}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div style="padding-bottom: 100px"></div>
+        </div>
+    </div>
+</div>

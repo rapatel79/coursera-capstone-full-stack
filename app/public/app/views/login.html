@@ -1,0 +1,36 @@
+<div class="container">
+
+    <div class="row page-heading">
+        <div class="col-sm-12 text-center">
+            <h3>Sign in to your account</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <form ng-submit="doLogin()" class="login-form">
+            <div class="col-xs-12 form-group">
+                <label class="" for="email">Your Email</label>
+                <div class="input-group">
+                    <div class="input-group-addon"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i></div>
+                    <input type="email" class="form-control input-sm" id="email" aria-describedby="email" ng-model="login.emailAddress">
+                </div>
+            </div>
+            <div class="col-xs-12 form-group">
+                <label class="" for="password">Password</label>
+                <input type="password" class="form-control input-sm" id="password" ng-model="login.password">
+            </div>
+            <div class="col-xs-12">
+                &nbsp;
+            </div>
+            <div class="col-xs-12 text-center">
+                <button type="submit" class="btn btn-info">Sign in to your account</button>
+            </div>
+            <div class="col-xs-12">
+                &nbsp;
+            </div>
+            <div class="col-xs-12 text-center">
+                <p>Don't have an account?&nbsp;&nbsp;<a href="#/register">Sign Up!</a></p>
+            </div>
+        </form>
+    </div>
+</div>

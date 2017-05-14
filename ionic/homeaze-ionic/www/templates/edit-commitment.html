@@ -1,0 +1,83 @@
+<ion-view view-title="Edit Commitment">
+  <ion-header-bar>
+    <h1 class="title">Edit Commitment</h1>
+  </ion-header-bar>
+  <ion-content>
+      <p class="instruction">Update details of the commitment below and click Save</p>
+        <form class="edit-form" ng-model="editCommitmentForm" name="editCommitmentForm" id="editCommitmentForm">
+          <div class="row">
+            <label class="item item-input form-group">
+                <span class="form-label col col-33">Category:</span>
+                <span class="form-input col">{{commitmentDetail.category}}</span>
+            </label>
+          </div>
+          <div class="row">
+              <label class="item item-input form-group">
+                <span class="form-label col col-33">Product Type:</span>
+                <span class="form-input col">{{commitmentDetail.productType}}</span>
+              </label>
+          </div>
+          <div class="form-section">
+              <h5 class="form-heading">Provider Details</h5>
+              <div class="row">
+                  <label class="item item-input form-group">
+                      <span class="form-label col col-33">Your Reference:</span>
+                      <input type="text" class="form-input col" id="providerRef" ng-model="commitmentDetail.providerRef">
+                    </label>
+                </div>
+              <div class="row">
+                <label class="item item-input form-group">
+                  <span class="form-label col col-33">Name:</span>
+                  <input type="text" class="form-input col" id="providerName" ng-model="commitmentDetail.providerName">
+                </label>
+              </div>
+              <div class="row">
+                <label class="item item-input form-group">
+                    <span class="form-label col col-33">Address:</span>
+                    <textarea type="text" class="form-input col" rows="3" ng-model="commitmentDetail.providerAddr1"></textarea>
+                </label>
+              </div>
+              <div class="row">
+                <label class="item item-input form-group">
+                    <span class="form-label col col-33">Telephone:</span>
+                    <input type="tel" class="form-input col" id="providerTel" ng-model="commitmentDetail.providerTel">
+                </label>
+              </div>
+          </div>
+          <div class="form-section"> 
+            <h5 class="form-heading">Renewal Information</h5>
+              <div class="row">
+                <label class="item item-input form-group">
+                  <span class="form-label col col-33">Renewal Date:</span>
+                  <button class="col button button-calm form-date-input" id="renewalDate" ng-click="openRenewalDatePicker()">
+                  {{renewalDateButtonText}}</button>
+                </label>
+              </div>
+              <div class="row">
+                <label class="item item-input form-group">
+                  <span class="form-label col col-33">Reminder Date:</span>
+                  <button class="col button button-calm form-date-input" id="reminderDate" ng-click="openReminderDatePicker()">
+                  {{reminderDateButtonText}}</button>
+                </label>
+              </div>
+          </div>
+          <div class="form-section"> 
+            <h5 class="form-heading">Notes</h5>
+            <div class="row">
+              <label class="item item-input form-group">
+                  <textarea type="text" class="col" rows="5" ng-model="commitmentDetail.notes"></textarea>
+              </label>
+            </div>
+            
+          </div>
+          <div style="padding: 10px"></div>
+          <div class="form-section"> 
+            <div class="row">
+                <a class="form-button button button-assertive col col-33" ng-click="cancel()">Cancel</a>
+                <a class="form-button button button-calm col col-33 col-offset-33" ng-click="saveCommitment()">Save</a>
+            </div>
+          </div>
+          <div style="padding: 50px"></div>
+        </form>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,157 @@
+ion-content {
+  background-color: #d9eafe;
+  background: linear-gradient( #d9eafe, #f7f6f6);
+}
+
+.validation-message {
+  color: red;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 0px 0 0px 10px;
+  
+}
+
+.form-date-input {
+  padding: 0px;
+  border: 0;
+  min-height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+}
+
+.form-heading {
+  margin-bottom: 0;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  /*border-top: solid;*/
+  border-width: 1px;
+  border-color: #f7f6f6;
+  box-shadow: 1px 1px 1px 1px lightgray;
+
+}
+
+.form-group {
+  background-color: transparent;
+  width: 100%;
+  font-size: 12px;
+  margin-right: 15px;
+  margin-left: 5px;
+  border: none;
+}
+
+.form-group > .form-input {
+  background-color: #f7f6f6;
+  height: inherit;
+  padding: 3px;
+    border: none;
+
+  -webkit-box-shadow: 3px 3px 3px 3px #f7f6f6;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    3px 3px 3px 3px #f7f6f6;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         3px 3px 3px 3px #f7f6f6; 
+}
+
+.instruction {
+  color: #f7f6f6;
+  background-color: deeppink;
+  font-size: 10px;
+  font-weight: bold;
+  margin: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  text-align: center;
+  border-radius: 25px;
+}
+
+.clickable {
+  cursor: pointer; cursor: hand;
+}
+
+.commitment-edit-actions {
+  padding-bottom: 30px;
+}
+
+.commitment-edit-actions > .col > .ion-edit:before {
+  color: #f7f6f6;
+  padding-right: 4px;
+}
+
+.commitment-edit-actions > .col > .ion-trash-a:before {
+  color: #800000;
+  padding-right: 4px;
+}
+
+.commitment-edit-actions > .col > .form-button {
+  padding-left: 5px;
+  padding-right: 15px;
+  margin: 0px;
+  font-size: 13px;
+  height: 25px;
+  line-height: 20px;
+  float: right;  
+}
+
+.commitment-edit-actions > .col > .ion-trash-a {
+  float: left;  
+}
+
+/* Commitment table*/
+.commitment-table {
+  background-color: #f7f6f6;
+  color: #006be5;
+  font-size: 11px;
+  margin: 4px;
+}
+
+.commitment-table > .header {
+  font-weight: bold;
+  background-color: #006be5;
+  color: #f7f6f6;
+  border-bottom: solid;
+  border-color: #d9eafe;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.commitment-table .row {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.commitment-table .data:nth-child(odd) {
+  background-color: #ffe6ff;
+}
+
+.commitment-table > .data > .col > .view-icon {
+  width: 50%;
+  margin: 0 auto;
+  font-size: 14px;
+}
+
+.commitment-table .col {
+  border-right: solid;
+  border-bottom: solid;
+  border-color: #d9eafe;
+}
+
+.form-button {
+  min-height: 20px;
+  line-height: 25px;
+  height: 35px;
+  /*margin: 5px;*/
+  /*font-size: 12px;*/
+}
+
+body {
+  align: center;
+  padding: 50px 0px 0px 0px;
+  z-index: 0;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+}
+

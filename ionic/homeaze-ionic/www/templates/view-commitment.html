@@ -1,0 +1,83 @@
+<ion-view view-title="View Commitment">
+  <ion-header-bar>
+    <h1 class="title">View Commitment</h1>
+  </ion-header-bar>
+  <ion-content>
+    <div ng-show="isLoading()"></div>
+    <div ng-show="!isLoading()">
+          <div class="row commitment-edit-actions">
+            <div class="col col-33">
+              <button class="form-button button button-assertive button-icon-left ion-trash-a"
+                ng-click="deleteCommitment(commitment)"> Delete</button>
+            </div>
+            <div class="col col-33 col-offset-33">
+              <button class="form-button button button-calm button-icon-left ion-edit"
+                ng-click="editCommitment(commitment)"> Edit</button>
+            </div>
+          </div>
+          <div class="row">
+            <label class="item item-input form-group">
+                <span class="form-label col col-33">Category:</span>
+                <span class="form-input col">{{commitmentDetail.category}}</span>
+            </label>
+          </div>
+          <div class="row">
+            <label class="item item-input form-group">
+                <span class="form-label col col-33">Product Type:</span>
+                <span class="form-input col">{{commitmentDetail.productType}}</span>
+            </label>
+          </div>
+          <div class="form-section">
+              <h5 class="form-heading">Provider Details</h5>
+              <div class="row">
+                <label class="item item-input form-group">
+                    <span class="form-label col col-33">Your Reference:</span>
+                    <span class="form-input col">{{commitmentDetail.providerRef}}</span>
+                </label>
+              </div>
+              <div class="row">
+                <label class="item item-input form-group">
+                    <span class="form-label col col-33">Name:</span>
+                    <span class="form-input col">{{commitmentDetail.providerName}}</span>
+                </label>
+              </div>
+              <div class="row" ng-show="hasAddress()">
+                <label class="item item-input form-group">
+                    <span class="form-label col col-33">Address:</span>
+                    <span class="form-input col">{{commitmentDetail.providerAddr1}}</span>
+                </label>
+              </div>
+              <div class="row" ng-show="hasProviderTel()">
+                <label class="item item-input form-group">
+                    <span class="form-label col col-33">Telephone:</span>
+                    <span class="form-input col">{{commitmentDetail.providerTel}}</span>
+                </label>
+              </div>
+          </div>
+          <div class="form-section"> 
+              <h5 class="form-heading">Renewal Information</h5>
+              <div class="row">
+                <label class="item item-input form-group">
+                    <span class="form-label col col-33">Renewal Date:</span>
+                    <span class="form-input col">{{commitmentDetail.renewalDate | date: 'dd MMM yyyy'}}</span>
+                </label>
+              </div>
+              <div class="row">
+                <label class="item item-input form-group">
+                    <span class="form-label col col-33">Reminder:</span>
+                    <span class="form-input col">{{commitmentDetail.reminderDate  | date: 'dd MMM yyyy @ HH:mm'}}</span>
+                </label>
+              </div>
+          </div>
+          <div class="form-section" ng-show="hasNotes()"> 
+            <h5 class="form-heading">Notes</h5>
+            <div class="row">
+              <label class="item item-input form-group">
+                  <textarea disabled type="text" class="col" rows="5" ng-model="commitmentDetail.notes"></textarea>
+              </label>
+            </div>
+          </div>
+          <div style="padding: 10px"></div>
+     </div>
+  </ion-content>
+</ion-view>

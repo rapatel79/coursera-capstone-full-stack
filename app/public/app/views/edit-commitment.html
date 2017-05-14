@@ -1,0 +1,94 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-4 col-sm-3 col-md-2">
+            <ul class="nav nav-pills nav-stacked app-stacked-nav">
+                <li role="presentation" class="active"><a>Commitments</a></li>
+                <li role="presentation"><a href="#/myfamily">My Family</a></li>
+                <!--<li role="presentation"><a href="#/settings">Settings</a></li>-->
+            </ul>
+            <div class="sign-out">
+                <a href="" ng-click="logout()">Sign Out</a>
+            </div>
+        </div>
+        <div class="loading" ng-show="isLoading">
+            <span us-spinner="{radius:15, width:8, length: 30}"></span>
+        </div>
+        <div ng-show="!isLoading" class="col-xs-8 col-sm-9 col-md-10">
+            <div class="row main-background">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <p class="instruction">Edit details of the commitment below and click Save</p>
+                    </div>
+                </div>
+                <div class="row">
+                 <form class="add-new-form">
+                     <div class="col-xs-12 col-sm-4 form-group">
+                        <label class="">Category:</label>
+                        <input type="text" disabled class="form-control input-sm" id="category" ng-model="commitmentDetail.category">
+                    </div>    
+                    
+                    <div class="col-xs-12 col-sm-4 form-group">
+                        <label class="">Product Type:</label>
+                        <input type="text" disabled class="form-control input-sm" id="productType" ng-model="commitmentDetail.productType">
+                    </div>
+
+                    <div class="col-xs-6 form-group">
+                        <label class="" for="providerName">Provider Name</label>
+                        <input type="text" class="form-control input-sm" id="providerName" ng-model="commitmentDetail.providerName">
+                    </div>
+                    <div class="col-xs-8 form-group">
+                        <label class="" for="providerRef">Provider Reference Number</label>
+                        <input type="text" class="form-control input-sm" id="providerRef" ng-model="commitmentDetail.providerRef">        
+                    </div>
+                    <div class="col-xs-12 col-sm-6 form-group">
+                        <label class="" for="providerAddr">Provider Address 1</label>
+                        <input type="text" class="form-control input-sm" id="providerAddr" ng-model="commitmentDetail.providerAddr1">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 form-group">
+                        <label class="" for="providerAddr2">Provider Address 2</label>
+                        <input type="text" class="form-control input-sm" id="providerAddr2" ng-model="commitmentDetail.providerAddr2">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 form-group">
+                        <label class="" for="providerTel">Provider Telephone</label>
+                        <input type="tel" class="form-control input-sm" id="providerTel" ng-model="commitmentDetail.providerTel">
+                    </div>
+                    <div class="col-xs-12 col-sm-8 form-group has-feedback" style="padding-right: 0px;">
+                        <label class="control-label" for="renewalDate">Renewal Date</label>
+                        <input type="text" class="form-control" uib-datepicker-popup="{{dateFormat}}" 
+                                ng-model="controlRenewalDate" init-date="commitmentDetail.renewalDate" is-open="renewalDatePopup.opened" datepicker-options="dateOptions" 
+                                ng-required="true" close-text="Close" alt-input-formats="altInputFormats" ng-click="popupRenewalDate()">
+                                <i class="glyphicon glyphicon-calendar form-control-feedback"></i>
+                    </div>
+                    <div class="col-xs-8 form-group has-feedback timepicker-adjust" style="padding-right: 0px;">
+                        <label class="control-label" for="reminderDate">Reminder Date</label>
+                        <input type="text" class="form-control" uib-datepicker-popup="{{dateFormat}}" 
+                                    ng-model="controlReminderDate" is-open="reminderDatePopup.opened" datepicker-options="dateOptions" 
+                                    ng-required="true" close-text="Close" alt-input-formats="altInputFormats" ng-click="popupReminderDate()">
+                        <i class="glyphicon glyphicon-calendar form-control-feedback"></i>
+                    </div>
+                    <div class="col-xs-4 form-group">
+                        <div uib-timepicker ng-model="controlReminderTime" 
+                                        hour-step="1" 
+                                        minute-step="1" 
+                                        show-meridian="false">
+                        </div>
+                    </div>    
+                    <div class="col-xs-12 col-sm-9 form-group">
+                        <label class="" for="notes">Notes</label>
+                        <textarea type="text" class="form-control" rows="5" ng-model="commitmentDetail.notes"></textarea>
+                    </div>
+                    <div class="col-xs-12" style="padding-top:20px;">
+                        <div class= "row">
+                            <button class="col-xs-2 btn btn-danger" ng-click="deleteCommitment()">Delete</button>
+                            <div class="col-xs-3">&nbsp;</div>
+                            <button class="col-xs-2 btn btn-warning" ng-click="cancelEdit()">Cancel</button>
+                            <div class="col-xs-3">&nbsp;</div>
+                            <button class="col-xs-2 btn btn-primary" ng-click="updateCommitment()">Save</button>
+                        </div>
+                    </div>
+                 </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

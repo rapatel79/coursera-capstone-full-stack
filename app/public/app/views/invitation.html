@@ -1,0 +1,36 @@
+<div class="container">
+
+    <div class="row page-heading">
+        <div class="col-sm-12 text-center">
+            <h3>Send an invitation to another family member</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <form ng-submit="sendInvitation()" class="login-form">
+            <div class="col-xs-12 form-group">
+                <label class="" for="name">Name</label>
+                <input type="text" class="form-control input-sm" id="invitation.name" ng-model="invitation.name">
+            </div>
+            <div class="col-xs-12 form-group">
+                <label class="" for="email">Email</label>
+                <div class="input-group">
+                    <div class="input-group-addon"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i></div>
+                    <input type="email" class="form-control input-sm" id="invitation.email" aria-describedby="email" ng-model="invitation.emailAddress">
+                </div>
+            </div>
+            <div class="col-xs-12">
+                &nbsp;
+            </div>
+            <div class="col-xs-12 text-center">
+                <button type="submit" class="btn btn-info">Send Invitation</button>
+            </div>
+            <div class="col-xs-12">
+                &nbsp;
+            </div>
+            <div class="col-xs-12 text-center">
+                <a href="" ng-click="cancelSend()">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>

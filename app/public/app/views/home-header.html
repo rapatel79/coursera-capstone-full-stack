@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row row-header">
+        <div class="col-xs-4 col-sm-3 col-md-2">
+            <a href=""><img class="logo" src="images/homeaze_logo2.png"></a>
+            <p class="text-center"><a href="#/myfamily">{{familyName}}</a></p>
+            
+        </div>
+        <div class="col-xs-8 col-sm-9 col-md-10">
+            <p class="todays-date">{{today | date : 'EEEE dd MMMM yyyy'}}</p>
+            <ul ng-hide="editMode" class="nav nav-pills home-nav-pills">
+                <li role="presentation" ng-class="{active : activeMenu === item}" ng-click="setActive(item)" ng-repeat="item in menuItems">
+                    <a title="{{getTitle(item)}}" ng-href="{{getUrl(item)}}">{{item}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

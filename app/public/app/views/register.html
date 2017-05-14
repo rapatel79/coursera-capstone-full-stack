@@ -1,0 +1,55 @@
+<div class="container">
+
+    <div class="row page-heading">
+        <div class="col-sm-12 text-center">
+            <h3>Registration</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <form ng-submit="doRegister()">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 form-group">
+                    <label class="" for="familyName">Family Name</label>
+                    <input type="text" required class="form-control input-sm" id="familyName" ng-model="registration.familyName">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 form-group">
+                    <label class="" for="forename">First Name</label>
+                    <input type="text" required class="form-control input-sm" id="forename" ng-model="registration.firstName">
+                </div>
+                <div class="col-xs-12 col-sm-6 form-group">
+                    <label class="" for="surname">Last Name</label>
+                    <input type="text" required class="form-control input-sm" id="surname" ng-model="registration.lastName">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 form-group">
+                    <label class="" for="email">Email</label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i></div>
+                        <input type="email" required class="form-control input-sm" id="email" aria-describedby="email" ng-model="registration.emailAddress">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 form-group">
+                    <label class="" for="password">Password</label>
+                    <input type="password" required class="form-control input-sm" id="password" ng-model="registration.password">
+                </div>
+                <div class="col-xs-12 col-sm-6 form-group">
+                    <label class="" for="confirm-password">Confirm Password</label>
+                    <input type="password" class="form-control input-sm" id="confirm-password" 
+                        required ng-model="registration.confirmPassword" compare-to="registration.password">
+                </div>
+            </div>
+            <div class="col-xs-12">
+                &nbsp;
+            </div>
+            <div class="col-xs-12 text-center">
+                <button type="submit" class="btn btn-info">Create Account</button>
+            </div>
+        </form>
+    </div>
+</div>

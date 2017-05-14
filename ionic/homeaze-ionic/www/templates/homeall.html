@@ -1,0 +1,35 @@
+<ion-view view-title="Family Commitments">
+  <ion-header-bar>
+    <h1 class="title">Commitments for the '{{familyName}}' family</h1>
+  </ion-header-bar>
+  <ion-content>
+    <div ng-show="!isLoading() && !hasCommitments()">
+       <p class="instruction">No commitments have been created for your family. 
+                      </br>Start by selecting "Add Commitment" from the main menu in the top left.</p>
+    </div>
+    <div ng-show="!isLoading() && hasCommitments()">
+        <div style="padding-top: 30px"></div>
+        <div class="commitment-table">
+          <div class="row header">
+            <div class="col">Product Type</div>
+            <div class="col">Provider</div>
+            <div class="col">Provider Reference</div>
+            <div class="col col-10"></div>
+          </div>
+          <div class="row data" title="Created by {{commitment.username}}" 
+                ng-repeat="commitment in commitments">
+            <div class="col">{{commitment.productType}}</div>
+            <div class="col">{{commitment.providerName}}</div>
+            <div class="col">{{commitment.providerRef}}</div>
+            <div class="col col-10">
+              <div class="view-icon">
+                <a title="View Commitment" class="icon ion-information-circled" 
+                  ng-click="viewCommitment(commitment)"></a>
+              </div>
+            </div>
+        </div>
+      </div><!--commitment-table -->
+    </div>
+    
+  </ion-content>
+</ion-view>
